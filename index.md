@@ -33,4 +33,17 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
 </div>
 
 
+## Method
+
+<div class="method-container">
+  <img src="assets/images/pipeline.png" alt="Pipeline Image" class="method-image">
+
+  <p class="method-caption">
+  Pipeline of <span class="x-scene_1">𝒳</span><span class="x-scene_2">-</span><span class="x-scene_3">S</span><span class="x-scene_4">c</span><span class="x-scene_5">e</span><span class="x-scene_6">n</span><span class="x-scene_7">e</span> for scalable driving scene generation:} (a) <strong>Multi-granular controllability</strong> supports both high-level text prompts and low-level geometric constraints for flexible specification;  (b) <strong>Joint occupancy-image generation</strong> synthesizes aligned 3D voxels and multi-view images via conditional diffusion; (c) <strong>Large-scale extrapolation and reconstruction</strong> enables coherent scene expansion through consistency-aware outpainting.
+  </p>
+</div>
+
+
+
+
 {% include_relative bibtex.md %}
