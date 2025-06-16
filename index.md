@@ -102,39 +102,47 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
 
 <div class="demo-section">
   <div id="scene-1" class="video-row scene active">
-    <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-      <source src="assets/images/text2scene_1_1.webm" type="video/webm">
-    </video>
-    <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-      <source src="assets/images/text2scene_1_2.webm" type="video/webm">
-    </video>
+    <div class="video-row">
+      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
+        <source src="assets/images/text2scene_1_1.webm" type="video/webm">
+      </video>
+      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
+        <source src="assets/images/text2scene_1_2.webm" type="video/webm">
+      </video>
+    </div>
   </div>
 
   <div id="scene-2" class="video-row scene">
-    <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-      <source src="assets/images/text2scene_2_1.webm" type="video/webm">
-    </video>
-    <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-      <source src="assets/images/text2scene_2_2.webm" type="video/webm">
-    </video>
+    <div class="video-row">
+      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
+        <source src="assets/images/text2scene_2_1.webm" type="video/webm">
+      </video>
+      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
+        <source src="assets/images/text2scene_2_2.webm" type="video/webm">
+      </video>
+    </div>
   </div>
 
   <div id="scene-3" class="video-row scene">
-    <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-      <source src="assets/images/text2scene_3_1.webm" type="video/webm">
-    </video>
-    <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-      <source src="assets/images/text2scene_3_2.webm" type="video/webm">
-    </video>
+    <div class="video-row">
+      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
+        <source src="assets/images/text2scene_3_1.webm" type="video/webm">
+      </video>
+      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
+        <source src="assets/images/text2scene_3_2.webm" type="video/webm">
+      </video>
+    </div>
   </div>
 
   <div id="scene-4" class="video-row scene">
-    <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-      <source src="assets/images/text2scene_4_1.webm" type="video/webm">
-    </video>
-    <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-      <source src="assets/images/text2scene_4_2.webm" type="video/webm">
-    </video>
+    <div class="video-row">
+      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
+        <source src="assets/images/text2scene_4_1.webm" type="video/webm">
+      </video>
+      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
+        <source src="assets/images/text2scene_4_2.webm" type="video/webm">
+      </video>
+    </div>
   </div>
 </div>
 
