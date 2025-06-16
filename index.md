@@ -47,15 +47,6 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
 ## Scene Generation Results
 
 ### 1. Layout Conditioned Generation
-<!-- <div class="demo-section">
-  <div class="video-row">
-    <img src="assets/images/generation_1.webm" alt="Generation 1" class="video-normal">
-  </div>
-  
-  <div class="video-row">
-    <img src="assets/images/generation_2.webm" alt="Generation 2" class="video-normal">
-  </div>
-</div> -->
 
 <div class="demo-section">
   <div class="video-row">
@@ -75,7 +66,16 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
 <div class="demo-section">
   <div class="video-row">
     <img src="assets/images/text2scene_1_1.png" alt="Text2Scene 1_1" class="video-medium">
-    <img src="assets/images/text2scene_1_2.gif" alt="Text2Scene 1_2" class="video-medium">
+    <video class="video-medium" autoplay loop muted playsinline preload="metadata">
+      <source src="assets/images/text2scene_1_2.webm" type="video/webm">
+    </video>
+  </div>
+
+  <div class="video-row">
+    <img src="assets/images/text2scene_2_1.png" alt="Text2Scene 2_1" class="video-medium">
+    <video class="video-medium" autoplay loop muted playsinline preload="metadata">
+      <source src="assets/images/text2scene_2_2.webm" type="video/webm">
+    </video>
   </div>
   
 </div>
