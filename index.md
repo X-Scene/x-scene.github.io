@@ -77,7 +77,20 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
       <source src="assets/images/text2scene_2_2.webm" type="video/webm">
     </video>
   </div>
-  
+
+  <div class="video-row">
+    <img src="assets/images/text2scene_3_1.png" alt="Text2Scene 3_1" class="video-medium">
+    <video class="video-medium" autoplay loop muted playsinline preload="metadata">
+      <source src="assets/images/text2scene_3_2.webm" type="video/webm">
+    </video>
+  </div>
+
+  <div class="video-row">
+    <img src="assets/images/text2scene_4_1.png" alt="Text2Scene 4_1" class="video-medium">
+    <video class="video-medium" autoplay loop muted playsinline preload="metadata">
+      <source src="assets/images/text2scene_4_2.webm" type="video/webm">
+    </video>
+  </div>
 </div>
 
 
