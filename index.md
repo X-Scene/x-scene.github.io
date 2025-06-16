@@ -102,28 +102,36 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
 
 <div class="demo-section">
   <div id="scene-1" class="video-row scene active">
-    <img src="assets/images/text2scene_1_1.png" alt="Text2Scene 1_1" class="video-medium">
+    <video class="video-medium" autoplay loop muted playsinline preload="metadata">
+      <source src="assets/images/text2scene_1_1.webm" type="video/webm">
+    </video>
     <video class="video-medium" autoplay loop muted playsinline preload="metadata">
       <source src="assets/images/text2scene_1_2.webm" type="video/webm">
     </video>
   </div>
 
   <div id="scene-2" class="video-row scene">
-    <img src="assets/images/text2scene_2_1.png" alt="Text2Scene 2_1" class="video-medium">
+    <video class="video-medium" autoplay loop muted playsinline preload="metadata">
+      <source src="assets/images/text2scene_2_1.webm" type="video/webm">
+    </video>
     <video class="video-medium" autoplay loop muted playsinline preload="metadata">
       <source src="assets/images/text2scene_2_2.webm" type="video/webm">
     </video>
   </div>
 
   <div id="scene-3" class="video-row scene">
-    <img src="assets/images/text2scene_3_1.png" alt="Text2Scene 3_1" class="video-medium">
+    <video class="video-medium" autoplay loop muted playsinline preload="metadata">
+      <source src="assets/images/text2scene_3_1.webm" type="video/webm">
+    </video>
     <video class="video-medium" autoplay loop muted playsinline preload="metadata">
       <source src="assets/images/text2scene_3_2.webm" type="video/webm">
     </video>
   </div>
 
   <div id="scene-4" class="video-row scene">
-    <img src="assets/images/text2scene_4_1.png" alt="Text2Scene 4_1" class="video-medium">
+    <video class="video-medium" autoplay loop muted playsinline preload="metadata">
+      <source src="assets/images/text2scene_4_1.webm" type="video/webm">
+    </video>
     <video class="video-medium" autoplay loop muted playsinline preload="metadata">
       <source src="assets/images/text2scene_4_2.webm" type="video/webm">
     </video>
