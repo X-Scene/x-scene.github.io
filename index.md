@@ -63,45 +63,15 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
 </div>
 
 ### 2. Text-to-Scene Generation
-<!-- <div class="demo-section">
-  <div class="video-row">
-    <img src="assets/images/text2scene_1_1.png" alt="Text2Scene 1_1" class="video-medium">
-    <video class="video-medium" autoplay loop muted playsinline preload="metadata">
-      <source src="assets/images/text2scene_1_2.webm" type="video/webm">
-    </video>
-  </div>
-
-  <div class="video-row">
-    <img src="assets/images/text2scene_2_1.png" alt="Text2Scene 2_1" class="video-medium">
-    <video class="video-medium" autoplay loop muted playsinline preload="metadata">
-      <source src="assets/images/text2scene_2_2.webm" type="video/webm">
-    </video>
-  </div>
-
-  <div class="video-row">
-    <img src="assets/images/text2scene_3_1.png" alt="Text2Scene 3_1" class="video-medium">
-    <video class="video-medium" autoplay loop muted playsinline preload="metadata">
-      <source src="assets/images/text2scene_3_2.webm" type="video/webm">
-    </video>
-  </div>
-
-  <div class="video-row">
-    <img src="assets/images/text2scene_4_1.png" alt="Text2Scene 4_1" class="video-medium">
-    <video class="video-medium" autoplay loop muted playsinline preload="metadata">
-      <source src="assets/images/text2scene_4_2.webm" type="video/webm">
-    </video>
-  </div>
-</div> -->
-
 <div class="button-row">
-  <button class="toggle-btn active" onclick="showScene(1)">Scene 1</button>
-  <button class="toggle-btn" onclick="showScene(2)">Scene 2</button>
-  <button class="toggle-btn" onclick="showScene(3)">Scene 3</button>
-  <button class="toggle-btn" onclick="showScene(4)">Scene 4</button>
+  <button class="toggle-btn active" onclick="showText2Scene(1)">Scene 1</button>
+  <button class="toggle-btn" onclick="showText2Scene(2)">Scene 2</button>
+  <button class="toggle-btn" onclick="showText2Scene(3)">Scene 3</button>
+  <button class="toggle-btn" onclick="showText2Scene(4)">Scene 4</button>
 </div>
 
 <div class="demo-section">
-  <div id="scene-1" class="video-row scene active">
+  <div id="text2scene-1" class="video-row scene active">
     <div class="video-row">
       <video class="video-normal" autoplay loop muted playsinline preload="metadata">
         <source src="assets/images/text2scene_1_1.webm" type="video/webm">
@@ -112,7 +82,7 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
     </div>
   </div>
 
-  <div id="scene-2" class="video-row scene">
+  <div id="text2scene-2" class="video-row scene">
     <div class="video-row">
       <video class="video-normal" autoplay loop muted playsinline preload="metadata">
         <source src="assets/images/text2scene_2_1.webm" type="video/webm">
@@ -123,7 +93,7 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
     </div>
   </div>
 
-  <div id="scene-3" class="video-row scene">
+  <div id="text2scene-3" class="video-row scene">
     <div class="video-row">
       <video class="video-normal" autoplay loop muted playsinline preload="metadata">
         <source src="assets/images/text2scene_3_1.webm" type="video/webm">
@@ -134,7 +104,7 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
     </div>
   </div>
 
-  <div id="scene-4" class="video-row scene">
+  <div id="text2scene-4" class="video-row scene">
     <div class="video-row">
       <video class="video-normal" autoplay loop muted playsinline preload="metadata">
         <source src="assets/images/text2scene_4_1.webm" type="video/webm">
@@ -148,12 +118,12 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
 
 ### 3. Large-Scale Scene Generation
 <div class="button-row">
-  <button class="toggle-btn active" onclick="showScene(1)">Scene 1</button>
-  <button class="toggle-btn" onclick="showScene(2)">Scene 2</button>
+  <button class="toggle-btn active" onclick="showLargeScaleScene(1)">Scene 1</button>
+  <button class="toggle-btn" onclick="showLargeScaleScene(2)">Scene 2</button>
 </div>
 
 <div class="demo-section">
-  <div id="scene-1" class="video-row scene active">
+  <div id="largescale-1" class="video-row scene active">
     <div class="video-row">
       <video class="video-normal" autoplay loop muted playsinline preload="metadata">
         <source src="assets/images/largescale_1_1.webm" type="video/webm">
@@ -170,7 +140,7 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
   </div>
 </div>
 
-  <div id="scene-2" class="video-row scene">
+  <div id="largescale-2" class="video-row scene">
     <div class="video-row">
       <video class="video-normal" autoplay loop muted playsinline preload="metadata">
         <source src="assets/images/largescale_2.webm" type="video/webm">
