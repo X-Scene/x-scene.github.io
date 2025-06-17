@@ -70,7 +70,7 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
   <button class="toggle-btn" onclick="showText2Scene(4)">Scene 4</button>
 </div>
 
-<div class="demo-section">
+<div id="text2scene-container" class="demo-section">
   <div id="text2scene-1" class="video-row scene active">
     <div class="video-row">
       <video class="video-normal" autoplay loop muted playsinline preload="metadata">
@@ -122,7 +122,7 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
   <button class="toggle-btn" onclick="showLargeScaleScene(2)">Scene 2</button>
 </div>
 
-<div class="demo-section">
+<div id="largescale-container" class="demo-section">
   <div id="largescale-1" class="video-row scene active">
     <div class="video-row">
       <video class="video-normal" autoplay loop muted playsinline preload="metadata">
