@@ -146,5 +146,27 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
   </div>
 </div>
 
+### 3. Large-Scale Scene Generation
+<div class="button-row">
+  <button class="toggle-btn active" onclick="showScene(1)">Scene 1</button>
+  <button class="toggle-btn" onclick="showScene(2)">Scene 2</button>
+</div>
+
+<div class="demo-section">
+  <div id="scene-1" class="video-row scene active">
+    <div class="video-row">
+      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
+        <source src="assets/images/largescale_1_1.webm" type="video/webm">
+      </video>
+    </div>
+    <div class="video-row">
+      <video class="video-medium" autoplay loop muted playsinline preload="metadata">
+        <source src="assets/images/largescale_1_2.webm" type="video/webm">
+      </video>
+      <video class="video-medium" autoplay loop muted playsinline preload="metadata">
+        <source src="assets/images/largescale_1_3.webm" type="video/webm">
+      </video>
+    </div>
+  </div>
 
 {% include_relative bibtex.md %}
