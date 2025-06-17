@@ -138,7 +138,6 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
       </video>
     </div>
   </div>
-</div>
 
   <div id="largescale-2" class="video-row scene">
     <div class="video-row">
@@ -147,5 +146,6 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
       </video>
     </div>
   </div>
+</div>
 
 {% include_relative bibtex.md %}
