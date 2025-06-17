@@ -170,4 +170,12 @@ Comprehensive experiments demonstrate that 𝒳<span class="italic">-Scene</span
   </div>
 </div>
 
+  <div id="scene-2" class="video-row scene">
+    <div class="video-row">
+      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
+        <source src="assets/images/largescale_2.webm" type="video/webm">
+      </video>
+    </div>
+  </div>
+
 {% include_relative bibtex.md %}
