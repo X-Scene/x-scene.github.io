@@ -21,26 +21,18 @@ layout: default
   <img src="assets/images/teaser.png" alt="Pipeline Image" class="method-image" loading="lazy">
 
   <p class="method-caption">
-  Overview of <span class="highlight-x-scene_1">𝒳</span><span class="highlight-x-scene_2">-</span><span class="highlight-x-scene_3">S</span><span class="highlight-x-scene_4">c</span><span class="highlight-x-scene_5">e</span><span class="highlight-x-scene_6">n</span><span class="highlight-x-scene_7">e</span>, a unified world generator that supports <span class="highlight">multi-granular controllability</span> through high-level text-to-layout generation and low-level BEV layout conditioning. It performs <span class="highlight">joint occupancy, image, and video generation</span> for 3D scene synthesis and reconstruction with high fidelity.
+  <strong>Overview of</strong> <span class="highlight-x-scene_1">𝒳</span><span class="highlight-x-scene_2">-</span><span class="highlight-x-scene_3">S</span><span class="highlight-x-scene_4">c</span><span class="highlight-x-scene_5">e</span><span class="highlight-x-scene_6">n</span><span class="highlight-x-scene_7">e</span>, a unified world generator that supports <span class="highlight">multi-granular controllability</span> through high-level text-to-layout generation and low-level BEV layout conditioning. It performs <span class="highlight">joint occupancy, image, and video generation</span> for 3D scene synthesis and reconstruction with high fidelity.
   </p>
 </div>
 
 <div class="abstract">
-
-Diffusion models are advancing autonomous driving by enabling realistic data synthesis, predictive end-to-end planning, and closed-loop simulation, with a primary focus on temporally consistent generation. However, <span class="highlight">large-scale 3D scenes</span> requiring spatial coherence remains underexplored.
-
+Diffusion models are advancing autonomous driving by enabling realistic data synthesis, predictive end-to-end planning, and closed-loop simulation, with a primary focus on temporally consistent generation. However, large-scale 3D scenes requiring spatial coherence remains underexplored.
 In this paper, we present <span class="highlight-x-scene_1">𝒳</span><span class="highlight-x-scene_2">-</span><span class="highlight-x-scene_3">S</span><span class="highlight-x-scene_4">c</span><span class="highlight-x-scene_5">e</span><span class="highlight-x-scene_6">n</span><span class="highlight-x-scene_7">e</span>, a novel framework for large-scale driving scene generation that achieves geometric intricacy, appearance fidelity, and flexible controllability.
-
 Specifically, 𝒳<span class="italic">-Scene</span> supports multi-granular control, including low-level layout conditioning driven by user input or text for detailed scene composition, and high-level semantic guidance informed by user intent and LLM-enriched prompts for efficient customization.
-
 To enhance geometric and visual fidelity, we introduce a unified pipeline that sequentially generates 3D semantic occupancy and corresponding multi-view images and videos, ensuring alignment and temporal consistency across modalities.
-
-We further extend local regions into large-scale scenes via <span class="highlight">consistency-aware scene outpainting,</span> which extrapolates occupancy and images from previously generated areas to maintain spatial and visual coherence.
-
+We further extend local regions into large-scale scenes via consistency-aware scene outpainting, which extrapolates occupancy and images from previously generated areas to maintain spatial and visual coherence.
 The resulting scenes are lifted into high-quality 3DGS representations, supporting diverse applications such as simulation and scene exploration.
-
 Extensive experiments demonstrate that 𝒳<span class="italic">-Scene</span> substantially advances controllability and fidelity in large-scale scene generation, empowering data generation and simulation for autonomous driving.
-
 </div>
 
 
@@ -50,10 +42,18 @@ Extensive experiments demonstrate that 𝒳<span class="italic">-Scene</span> su
   <img src="assets/images/pipeline.png" alt="Pipeline Image" class="method-image" loading="lazy">
 
   <p class="method-caption">
-  Pipeline of <span class="x-scene_1">𝒳</span><span class="x-scene_2">-</span><span class="x-scene_3">S</span><span class="x-scene_4">c</span><span class="x-scene_5">e</span><span class="x-scene_6">n</span><span class="x-scene_7">e</span> for driving scene generation: <strong>(a) Multi-granular controllability</strong> supports both high-level text prompts and low-level geometric constraints for flexible specification;  <strong>(b) Joint occupancy-image-video generation</strong> synthesizes aligned 3D voxels and multi-view images and videos via conditional diffusion; <strong>(c) Large-scale extrapolation</strong> enables coherent scene expansion through consistency-aware outpainting.
+  <strong>Pipeline of</strong> <span class="highlight-x-scene_1">𝒳</span><span class="highlight-x-scene_2">-</span><span class="highlight-x-scene_3">S</span><span class="highlight-x-scene_4">c</span><span class="highlight-x-scene_5">e</span><span class="highlight-x-scene_6">n</span><span class="highlight-x-scene_7">e</span> <strong>for driving scene generation</strong>: <span class="highlight">(a) Multi-granular controllability</span> supports both high-level text prompts and low-level geometric constraints for flexible specification;  <span class="highlight">(b) Joint occupancy-image-video generation</span> synthesizes aligned 3D voxels and multi-view images and videos via conditional diffusion; <span class="highlight">(c) Large-scale extrapolation</span> enables coherent scene expansion through consistency-aware outpainting.
   </p>
 </div>
 
+
+<div class="abstract">
+<span class="highlight-x-scene_1">𝒳</span><span class="highlight-x-scene_2">-</span><span class="highlight-x-scene_3">S</span><span class="highlight-x-scene_4">c</span><span class="highlight-x-scene_5">e</span><span class="highlight-x-scene_6">n</span><span class="highlight-x-scene_7">e</span> aims to generate large-scale 3D driving scenes within a unified framework addressing controllability, fidelity, and scalability.
+It consists of three main components:
+<strong>1) Multi-Granular Controllability</strong>, which integrates high-level user intent with low-level geometric constraints for flexible scene specification;
+<strong>2) Joint Occupancy, Image, and Video Generation</strong>, which employs conditioned diffusion models to synthesize 3D voxel occupancy, multi-view images, and temporally coherent videos with 3D-aware guidance; and
+<strong>3) Large-Scale Scene Extrapolation and Reconstruction</strong>, which extends scenes via consistency-aware outpainting and lifts them into 3DGS representations for downstream simulation and exploration.
+</div>
 
 ## Scene Generation Results
 
