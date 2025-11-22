@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="title-container">
-  <img src="assets/images/logo.png" alt="Logo" class="logo">
+  <img src="assets/images/logo.png" alt="Logo" class="logo" loading="lazy">
   <h1>
     <span class="main-title"><span class="x-scene_1">𝒳</span><span class="x-scene_2">-</span><span class="x-scene_3">S</span><span class="x-scene_4">c</span><span class="x-scene_5">e</span><span class="x-scene_6">n</span><span class="x-scene_7">e</span>: Large-Scale Driving Scene Generation with High Fidelity and Flexible Controllability</span>
   </h1>
@@ -18,7 +18,7 @@ layout: default
 ## Abstract
 
 <div class="method-container">
-  <img src="assets/images/teaser.png" alt="Pipeline Image" class="method-image">
+  <img src="assets/images/teaser.png" alt="Pipeline Image" class="method-image" loading="lazy">
 
   <p class="method-caption">
   Overview of <span class="highlight-x-scene_1">𝒳</span><span class="highlight-x-scene_2">-</span><span class="highlight-x-scene_3">S</span><span class="highlight-x-scene_4">c</span><span class="highlight-x-scene_5">e</span><span class="highlight-x-scene_6">n</span><span class="highlight-x-scene_7">e</span>, a unified world generator that supports <span class="highlight">multi-granular controllability</span> through high-level text-to-layout generation and low-level BEV layout conditioning. It performs <span class="highlight">joint occupancy, image, and video generation</span> for 3D scene synthesis and reconstruction with high fidelity.
@@ -47,7 +47,7 @@ Extensive experiments demonstrate that 𝒳<span class="italic">-Scene</span> su
 ## Method
 
 <div class="method-container">
-  <img src="assets/images/pipeline.png" alt="Pipeline Image" class="method-image">
+  <img src="assets/images/pipeline.png" alt="Pipeline Image" class="method-image" loading="lazy">
 
   <p class="method-caption">
   Pipeline of <span class="x-scene_1">𝒳</span><span class="x-scene_2">-</span><span class="x-scene_3">S</span><span class="x-scene_4">c</span><span class="x-scene_5">e</span><span class="x-scene_6">n</span><span class="x-scene_7">e</span> for driving scene generation: <strong>(a) Multi-granular controllability</strong> supports both high-level text prompts and low-level geometric constraints for flexible specification;  <strong>(b) Joint occupancy-image-video generation</strong> synthesizes aligned 3D voxels and multi-view images and videos via conditional diffusion; <strong>(c) Large-scale extrapolation</strong> enables coherent scene expansion through consistency-aware outpainting.
