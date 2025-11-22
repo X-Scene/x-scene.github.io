@@ -19,64 +19,148 @@
         {{ content }}
     </div>
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const toc = document.getElementById('toc');
-        const headings = document.querySelectorAll('h2, h3');
-        const tocList = document.createElement('ul');
-
-        const tocTitle = document.createElement('h4');
-        tocTitle.textContent = 'Contents';
-        tocTitle.style.marginBottom = '10px';
-        tocTitle.style.borderBottom = '1px solid #ddd';
-        tocTitle.style.paddingBottom = '5px';
-        toc.appendChild(tocTitle);
-
-        headings.forEach(heading => {
-            const listItem = document.createElement('li');
-            const link = document.createElement('a');
-            
-            let shortTitle = heading.textContent;
-            if (heading.textContent.includes(':')) {
-                shortTitle = heading.textContent.split(':')[0].trim();
+        document.addEventListener('DOMContentLoaded', function() {
+            const toc = document.getElementById('toc');
+            const headings = document.querySelectorAll('h2, h3');
+            const tocList = document.createElement('ul');
+        
+            const tocTitle = document.createElement('h4');
+            tocTitle.textContent = 'Contents';
+            tocTitle.style.marginBottom = '10px';
+            tocTitle.style.borderBottom = '1px solid #ddd';
+            tocTitle.style.paddingBottom = '5px';
+            toc.appendChild(tocTitle);
+        
+            headings.forEach(heading => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                
+                let shortTitle = heading.textContent;
+                if (heading.textContent.includes(':')) {
+                    shortTitle = heading.textContent.split(':')[0].trim();
+                } else {
+                    shortTitle = heading.textContent
+                        .replace('Generation', '')
+                        .trim();
+                }
+                
+                link.textContent = shortTitle;
+                link.href = `#${heading.id}`;
+                link.classList.add(`toc-${heading.tagName.toLowerCase()}`);
+                listItem.appendChild(link);
+                tocList.appendChild(listItem);
+        
+                if (!heading.id) {
+                    heading.id = heading.textContent.toLowerCase().replace(/\s+/g, '-');
+                }
+                
+                if (heading.tagName === 'H3') {
+                    heading.style.fontWeight = 'normal';
+                }
+            });
+        
+            toc.appendChild(tocList);
+        
+            // -----------------------
+            //  原有的切换逻辑
+            // -----------------------
+            window.showText2Scene = function(n) {
+                document.querySelectorAll('#text2scene-container .scene').forEach(s => s.classList.remove('active'));
+                const activeScene = document.getElementById(`text2scene-${n}`);
+                if (activeScene) {
+                    activeScene.classList.add('active');
+                }
+        
+                const btnRows = document.querySelectorAll('.button-row');
+                if (btnRows[0]) {
+                    btnRows[0].querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
+                    const btn = btnRows[0].querySelectorAll('.toggle-btn')[n - 1];
+                    if (btn) btn.classList.add('active');
+                }
+        
+                // 切换时，确保当前 scene 里的视频尽快加载
+                if (activeScene) {
+                    activeScene.querySelectorAll('video.lazy-video').forEach(loadVideo);
+                }
+            };
+        
+            window.showLargeScaleScene = function(n) {
+                document.querySelectorAll('#largescale-container .scene').forEach(s => s.classList.remove('active'));
+                const activeScene = document.getElementById(`largescale-${n}`);
+                if (activeScene) {
+                    activeScene.classList.add('active');
+                }
+        
+                const btnRows = document.querySelectorAll('.button-row');
+                if (btnRows[1]) {
+                    btnRows[1].querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
+                    const btn = btnRows[1].querySelectorAll('.toggle-btn')[n - 1];
+                    if (btn) btn.classList.add('active');
+                }
+        
+                if (activeScene) {
+                    activeScene.querySelectorAll('video.lazy-video').forEach(loadVideo);
+                }
+            };
+        
+            // -----------------------
+            //   懒加载视频逻辑
+            // -----------------------
+            const lazyVideos = document.querySelectorAll('video.lazy-video');
+        
+            function loadVideo(video) {
+                if (!video || video.dataset.loaded === 'true') return;
+        
+                const src = video.dataset.src;
+                if (!src) return;
+        
+                // 防止重复 append source
+                while (video.firstChild) {
+                    video.removeChild(video.firstChild);
+                }
+        
+                const source = document.createElement('source');
+                source.src = src;
+                source.type = 'video/webm';
+                video.appendChild(source);
+        
+                video.load();
+                video.play().catch(() => {
+                    // 某些浏览器策略可能会拦住自动播放，忽略即可
+                });
+        
+                video.dataset.loaded = 'true';
+            }
+        
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            loadVideo(entry.target);
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    rootMargin: '200px'
+                });
+        
+                lazyVideos.forEach(video => observer.observe(video));
             } else {
-                shortTitle = heading.textContent
-                    .replace('Generation', '')
-                    .trim();
+                // 不支持 IntersectionObserver 的浏览器，直接全部加载
+                lazyVideos.forEach(loadVideo);
             }
-            
-            link.textContent = shortTitle;
-            link.href = `#${heading.id}`;
-            link.classList.add(`toc-${heading.tagName.toLowerCase()}`);
-            listItem.appendChild(link);
-            tocList.appendChild(listItem);
-
-            if (!heading.id) {
-                heading.id = heading.textContent.toLowerCase().replace(/\s+/g, '-');
-            }
-            
-            if (heading.tagName === 'H3') {
-                heading.style.fontWeight = 'normal';
-            }
+        
+            // 初始时：加载当前可见区域内的 active 场景视频
+            lazyVideos.forEach(video => {
+                const scene = video.closest('.scene');
+                if (scene && scene.classList.contains('active')) {
+                    const rect = video.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        loadVideo(video);
+                    }
+                }
+            });
         });
-
-        toc.appendChild(tocList);
-
-        window.showText2Scene = function(n) {
-            document.querySelectorAll('#text2scene-container .scene').forEach(s => s.classList.remove('active'));
-            document.getElementById(`text2scene-${n}`).classList.add('active');
-
-            document.querySelectorAll('.button-row')[0].querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.button-row')[0].querySelectorAll('.toggle-btn')[n - 1].classList.add('active');
-        };
-
-        window.showLargeScaleScene = function(n) {
-            document.querySelectorAll('#largescale-container .scene').forEach(s => s.classList.remove('active'));
-            document.getElementById(`largescale-${n}`).classList.add('active');
-
-            document.querySelectorAll('.button-row')[1].querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.button-row')[1].querySelectorAll('.toggle-btn')[n - 1].classList.add('active');
-        };
-    });
     </script>
 </body>
 </html>

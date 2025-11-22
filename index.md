@@ -61,14 +61,24 @@ Extensive experiments demonstrate that 𝒳<span class="italic">-Scene</span> su
 
 <div class="demo-section">
   <div class="video-row">
-    <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-      <source src="assets/images/generation_1.webm" type="video/webm">
+    <video
+      class="video-normal lazy-video"
+      muted
+      loop
+      playsinline
+      preload="none"
+      data-src="assets/images/generation_1.webm">
     </video>
   </div>
 
   <div class="video-row">
-    <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-      <source src="assets/images/generation_2.webm" type="video/webm">
+    <video
+      class="video-normal lazy-video"
+      muted
+      loop
+      playsinline
+      preload="none"
+      data-src="assets/images/generation_2.webm">
     </video>
   </div>
 </div>
@@ -84,44 +94,84 @@ Extensive experiments demonstrate that 𝒳<span class="italic">-Scene</span> su
 <div id="text2scene-container" class="demo-section">
   <div id="text2scene-1" class="video-row scene active">
     <div class="video-row">
-      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-        <source src="assets/images/text2scene_1_1.webm" type="video/webm">
+      <video
+        class="video-normal lazy-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-src="assets/images/text2scene_1_1.webm">
       </video>
-      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-        <source src="assets/images/text2scene_1_2.webm" type="video/webm">
+      <video
+        class="video-normal lazy-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-src="assets/images/text2scene_1_2.webm">
       </video>
     </div>
   </div>
 
   <div id="text2scene-2" class="video-row scene">
     <div class="video-row">
-      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-        <source src="assets/images/text2scene_2_1.webm" type="video/webm">
+      <video
+        class="video-normal lazy-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-src="assets/images/text2scene_2_1.webm">
       </video>
-      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-        <source src="assets/images/text2scene_2_2.webm" type="video/webm">
+      <video
+        class="video-normal lazy-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-src="assets/images/text2scene_2_2.webm">
       </video>
     </div>
   </div>
 
   <div id="text2scene-3" class="video-row scene">
     <div class="video-row">
-      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-        <source src="assets/images/text2scene_3_1.webm" type="video/webm">
+      <video
+        class="video-normal lazy-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-src="assets/images/text2scene_3_1.webm">
       </video>
-      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-        <source src="assets/images/text2scene_3_2.webm" type="video/webm">
+      <video
+        class="video-normal lazy-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-src="assets/images/text2scene_3_2.webm">
       </video>
     </div>
   </div>
 
   <div id="text2scene-4" class="video-row scene">
     <div class="video-row">
-      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-        <source src="assets/images/text2scene_4_1.webm" type="video/webm">
+      <video
+        class="video-normal lazy-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-src="assets/images/text2scene_4_1.webm">
       </video>
-      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-        <source src="assets/images/text2scene_4_2.webm" type="video/webm">
+      <video
+        class="video-normal lazy-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-src="assets/images/text2scene_4_2.webm">
       </video>
     </div>
   </div>
@@ -136,24 +186,44 @@ Extensive experiments demonstrate that 𝒳<span class="italic">-Scene</span> su
 <div id="largescale-container" class="demo-section">
   <div id="largescale-1" class="video-row scene active">
     <div class="video-row">
-      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-        <source src="assets/images/largescale_1_1.webm" type="video/webm">
+      <video
+        class="video-normal lazy-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-src="assets/images/largescale_1_1.webm">
       </video>
     </div>
     <div class="video-row">
-      <video class="video-medium" autoplay loop muted playsinline preload="metadata">
-        <source src="assets/images/largescale_1_2.webm" type="video/webm">
+      <video
+        class="video-medium lazy-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-src="assets/images/largescale_1_2.webm">
       </video>
-      <video class="video-medium" autoplay loop muted playsinline preload="metadata">
-        <source src="assets/images/largescale_1_3.webm" type="video/webm">
+      <video
+        class="video-medium lazy-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-src="assets/images/largescale_1_3.webm">
       </video>
     </div>
   </div>
 
   <div id="largescale-2" class="video-row scene">
     <div class="video-row">
-      <video class="video-normal" autoplay loop muted playsinline preload="metadata">
-        <source src="assets/images/largescale_2.webm" type="video/webm">
+      <video
+        class="video-normal lazy-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-src="assets/images/largescale_2.webm">
       </video>
     </div>
   </div>
