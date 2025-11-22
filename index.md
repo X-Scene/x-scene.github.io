@@ -57,7 +57,7 @@ Extensive experiments demonstrate that 𝒳<span class="italic">-Scene</span> su
 
 ## Scene Generation Results
 
-### 1. Layout Conditioned Generation
+### 1. Layout-to-Scene Generation
 
 <div class="demo-section">
   <div class="video-row">
